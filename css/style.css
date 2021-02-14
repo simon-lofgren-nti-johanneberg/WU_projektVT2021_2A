@@ -1,0 +1,196 @@
+/* Generell styling till allt */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Styling till sidan "Start" */
+
+#grid-wrapper_1 {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 200px 400px 400px;
+    grid-template-areas: 
+        "na he"
+        "s1 s1"
+        "s2 s2";
+}
+
+#header_first_page {
+    grid-area: he;
+    background: yellow;
+}
+
+#sec1_1 {
+    grid-area: s1;
+    background: blue;
+}
+
+#sec2_1 {
+    grid-area: s2;
+    background: green;
+}
+
+.nav_all_pages {
+    grid-area: na;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.menu {
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute; 
+    top: 200px;
+    height: 800px;
+    left: -20vw;
+    background-color: lightskyblue;
+    align-items: center;
+    width: 20vw;
+    transition: all 0.5s;
+}
+
+.menu_connected {
+    transform: translateX(20vw);
+}
+
+.menu li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+.hamburger {
+    cursor: pointer;
+    margin: 20px;
+}
+
+.lines {
+    width: 25px;
+    height: 3px;
+    background-color: green;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.5s;
+}
+
+.cross .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.cross .line2{
+    opacity: 0;
+}
+
+.cross .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+@media screen and (min-width: 900px) {
+
+#grid-wrapper_1 {
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 
+        "na he"
+        "s2 s1"
+        "s2 s1";
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav_all_pages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_connected {
+    transform: none;
+}
+
+.menu {
+    flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100%;
+
+}
+
+}
+
+/* Styling till sidan "Om oss" (styling som inte redan är gjord ovan) */
+
+#grid-wrapper_2 {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 200px 425px 105px 90px 90px 90px;
+    grid-template-areas: 
+        "na h1" 
+        "m1 m1"
+        "a1 a1"
+        "a2 a2"
+        "a3 a3"
+        "a4 a4"
+    ;
+}
+
+#header_second_page {
+    grid-area: h1;
+    background: yellow;
+}
+
+#main_second_page {
+    grid-area: m1;
+    background: tomato;
+}
+
+#art1_1 {
+    grid-area: a1;
+    background: violet;
+}
+
+#art2_1 {
+    grid-area: a2;
+    background: turquoise;
+}
+
+#art3_1 {
+    grid-area: a3;
+    background: pink;
+}
+
+#art4_1 {
+    grid-area: a4;
+    background: goldenrod;
+}
+
+@media screen and (min-width: 900px) {
+    #grid-wrapper_2 {
+        grid-template-columns: 40% 30% 30%;
+        grid-template-rows: 200px 400px 400px;
+        grid-template-areas: 
+            "na na h1" 
+            "m1 a1 a2"
+            "m1 a3 a4"
+        ;
+    }
+}
+
+/* Styling till sidan "Medlemskap" (styling som inte redan är gjord ovan) */
