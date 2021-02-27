@@ -8,6 +8,10 @@
 
 /* Styling till sidan "Start" */
 
+a {
+    color:black;
+}
+
 #grid-wrapper_1 {
     width: 100vw;
     height: 100vh;
@@ -20,22 +24,22 @@
         "s2 s2";
 }
 
-#header_first_page {
+header {
     grid-area: he;
     background: yellow;
 }
 
-#sec1_1 {
+.sec1 {
     grid-area: s1;
     background: blue;
 }
 
-#sec2_1 {
+.sec2 {
     grid-area: s2;
     background: green;
 }
 
-.nav_all_pages {
+nav {
     grid-area: na;
     display: flex;
     justify-content: center;
@@ -112,7 +116,6 @@
 
 .nav_all_pages {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 
@@ -122,13 +125,11 @@
 
 .menu {
     flex-direction: row;
-        justify-content: space-around;
-        position: relative;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        height: 100%;
-
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 70vw;
+    height: 200px;
 }
 
 }
@@ -142,8 +143,8 @@
     grid-template-columns: 20% 80%;
     grid-template-rows: 200px 425px 105px 90px 90px 90px;
     grid-template-areas: 
-        "na h1" 
-        "m1 m1"
+        "na he" 
+        "ma ma"
         "a1 a1"
         "a2 a2"
         "a3 a3"
@@ -151,32 +152,27 @@
     ;
 }
 
-#header_second_page {
-    grid-area: h1;
-    background: yellow;
-}
-
-#main_second_page {
-    grid-area: m1;
+main {
+    grid-area: ma;
     background: tomato;
 }
 
-#art1_1 {
+#art1 {
     grid-area: a1;
     background: violet;
 }
 
-#art2_1 {
+#art2 {
     grid-area: a2;
     background: turquoise;
 }
 
-#art3_1 {
+#art3 {
     grid-area: a3;
     background: pink;
 }
 
-#art4_1 {
+#art4 {
     grid-area: a4;
     background: goldenrod;
 }
@@ -186,11 +182,89 @@
         grid-template-columns: 40% 30% 30%;
         grid-template-rows: 200px 400px 400px;
         grid-template-areas: 
-            "na na h1" 
-            "m1 a1 a2"
-            "m1 a3 a4"
+            "na na he" 
+            "ma a1 a2"
+            "ma a3 a4"
         ;
     }
 }
 
 /* Styling till sidan "Medlemskap" (styling som inte redan är gjord ovan) */
+
+#grid-wrapper_3 {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 200px 800px;
+    grid-template-areas: 
+        "na he"
+        "ma ma"
+    ;
+}
+
+@media screen and (min-width: 900px) {
+    #grid-wrapper_3 {
+        grid-template-columns: 70% 30%;
+        grid-template-areas: 
+            "na he" 
+            "ma ma"
+        ;
+    }
+}
+
+/* Styling till sidan "Tävlingar" (styling som inte redan är gjord ovan) */
+
+#grid-wrapper_4 {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-template-rows: 200px 300px 500px;
+    grid-template-areas: 
+            "na he he" 
+            "s1 s1 s1"
+            "s2 s2 s2"
+}
+
+@media screen and (min-width: 900px) {
+    #grid-wrapper_4 {
+        grid-template-columns: 50% 20% 30%;
+        grid-template-rows: 200px 400px 400px;
+        grid-template-areas: 
+            "na na he" 
+            "s1 s2 s2"
+            "s1 s2 s2"
+        ;
+    }
+}
+
+/* Styling till sidan "Kontakt" (styling som inte redan är gjord ovan) */
+
+#grid-wrapper_5 {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 200px 700px;
+    grid-template-areas: 
+            "na he" 
+            "as s1"    
+}
+
+aside {
+    grid-area: as;
+    background: brown;
+}
+
+@media screen and (min-width: 900px) {
+    #grid-wrapper_5 {
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 200px 500px 200px;
+        grid-template-areas: 
+            "na he" 
+            "s1 s1"
+            "as as"
+        ;
+    }
+}
