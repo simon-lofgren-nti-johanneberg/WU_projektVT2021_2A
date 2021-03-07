@@ -8,7 +8,9 @@
 
 /* Styling till sidan "Start" */
 
-a {
+.links_to_nav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     color:black;
 }
 
@@ -27,16 +29,63 @@ a {
 header {
     grid-area: he;
     background: yellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container_to_heading_main_page {
+    display: none;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.heading {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.temp_image {
+    width: 120px;
+    height: 120px;
 }
 
 .sec1 {
     grid-area: s1;
-    background: blue;
+    background: purple;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .sec2 {
     grid-area: s2;
     background: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text_container {
+    width: 200px;
+    height: 60px;
+    border: black solid 3px;
+}
+
+.text_to_images {
+    font-size: 13px;
+    font-family: 'Times New Roman', Times, serif;
+    color: hotpink;
+
+}
+
+#link_to_principal_contact {
+    color: lightblue;
+}
+
+.images_main_page {
+    width: 200px;
+    height: 320px;
 }
 
 nav {
@@ -48,6 +97,7 @@ nav {
 
 .menu {
     font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -110,6 +160,42 @@ nav {
         "s2 s1";
 }
 
+header {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.container_to_heading_main_page {
+    display: block;
+}
+
+.heading {
+    display: none;
+}
+
+.temp_image {
+    margin: 40px;
+}
+
+.sec1 {
+    flex-direction: column;
+}
+
+.images_section_2_main_page {
+    width: 300px;
+    height: 430px;
+}
+
+.text_container {
+    width: 300px;
+    height: 90px;
+}
+
+.text_to_images {
+    font-size: 19px;
+    color: hotpink;
+}
+
 .hamburger {
     display: none;
 }
@@ -150,6 +236,10 @@ nav {
         "a3 a3"
         "a4 a4"
     ;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 main {
