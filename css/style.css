@@ -45,7 +45,7 @@ header {
     font-family: 'Times New Roman', Times, serif;
 }
 
-.temp_image {
+.logo {
     width: 120px;
     height: 120px;
 }
@@ -96,8 +96,6 @@ nav {
 }
 
 .menu {
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -117,7 +115,8 @@ nav {
 
 .menu li {
     list-style: none;
-    font-size: 20px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .menu a {
@@ -161,7 +160,7 @@ nav {
 }
 
 header {
-    justify-content: flex-end;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -171,10 +170,6 @@ header {
 
 .heading {
     display: none;
-}
-
-.temp_image {
-    margin: 40px;
 }
 
 .sec1 {
@@ -218,6 +213,10 @@ header {
     height: 200px;
 }
 
+.menu li {
+    font-size: 20px;
+}
+
 }
 
 /* Styling till sidan "Om oss" (styling som inte redan är gjord ovan) */
@@ -227,7 +226,7 @@ header {
     height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 200px 425px 105px 90px 90px 90px;
+    grid-template-rows: 200px 420px 95px 95px 95px 95px;
     grid-template-areas: 
         "na he" 
         "ma ma"
@@ -267,6 +266,46 @@ main {
     background: goldenrod;
 }
 
+.trainers {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.images_trainers {
+    height: 70px;
+    width: auto;
+    margin-left: 10px;
+}
+
+.images_trainers:hover {
+    height: 200px;
+    width: auto;
+    z-index: 1;
+}
+
+.list_trainer {
+   margin-left: 20px;
+}
+
+#main_om_oss {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading_for_content {
+    position: relative;
+    top: 10px;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.text_for_content {
+    margin: 10px;
+    font-size: 15px;
+}
+
 @media screen and (min-width: 900px) {
     #grid-wrapper_2 {
         grid-template-columns: 40% 30% 30%;
@@ -276,6 +315,30 @@ main {
             "ma a1 a2"
             "ma a3 a4"
         ;
+    }
+
+    .text_for_content {
+        font-size: 18px;
+    }
+
+    .trainers {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .images_trainers {
+        height: 200px;
+        margin-left: 0px;
+    }
+
+    .images_trainers:hover {
+        height: 200px;
+    }
+
+    .list_trainer {
+        font-size: 17px;
     }
 }
 
