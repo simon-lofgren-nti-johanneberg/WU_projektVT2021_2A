@@ -11,6 +11,7 @@
 .links_to_nav {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 15px;
     color:black;
 }
 
@@ -96,6 +97,7 @@ nav {
 }
 
 .menu {
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -114,9 +116,7 @@ nav {
 }
 
 .menu li {
-    list-style: none;
-    font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
+    list-style-type: none;
 }
 
 .menu a {
@@ -317,6 +317,10 @@ main {
         ;
     }
 
+    .heading_for_content {
+        font-size: 30px;
+    }
+
     .text_for_content {
         font-size: 18px;
     }
@@ -356,13 +360,31 @@ main {
     ;
 }
 
+#main_medlemskap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#list_medlemskap {
+    list-style-type: none;
+    margin: 10px;
+}
+
+.list-item_medlemskap {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 @media screen and (min-width: 900px) {
     #grid-wrapper_3 {
         grid-template-columns: 70% 30%;
-        grid-template-areas: 
-            "na he" 
-            "ma ma"
-        ;
+    }
+
+    .list-item_medlemskap {
+        font-size: 22px;
     }
 }
 
@@ -372,23 +394,123 @@ main {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template-columns: 20% 30% 50%;
-    grid-template-rows: 200px 300px 500px;
+    grid-template-columns: 20% 30% 25% 25%;
+    grid-template-rows: 200px 50px 250px 50px 225px 225px;
     grid-template-areas: 
-            "na he he" 
-            "s1 s1 s1"
-            "s2 s2 s2"
+            "na he he he"
+            "d1 d1 d1 d1"
+            "s1 s1 s1 s1"
+            "d2 d2 d2 d2"
+            "a1 a1 a2 a2"
+            "a3 a3 a4 a4"
+}
+
+#heading_sec1_tavlingar {
+    grid-area: d1;
+    background: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heading_sec2_tavlingar {
+    grid-area: d2;
+    background: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headings_tavlingar {
+    text-decoration: underline;
+}
+
+#sec2_tavlingar {
+    flex-direction: column;
+}
+
+#art1_in_tidigare_tavlingar {
+    grid-area: a1;
+    background: chocolate;
+}
+
+#art2_in_tidigare_tavlingar {
+    grid-area: a2;
+    background: blueviolet;
+}
+
+#art3_in_tidigare_tavlingar {
+    grid-area: a3;
+    background: grey;
+}
+
+#art4_in_tidigare_tavlingar {
+    grid-area: a4;
+    background: red;
+}
+
+.articles_in_tidigare_tavlingar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lists_tavlingar {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    list-style-type: none;
+}
+
+.nothing_at_the_moment {
+    font-style: italic;
+    margin: 5px;
+}
+
+.list_container {
+    height: 100px;
+}
+
+#link_tavlingar {
+    text-decoration: none;
+    color: lightblue;
+}
+
+.list_old_results {
+    list-style-type: none;
+}
+
+.text_old_results {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 @media screen and (min-width: 900px) {
     #grid-wrapper_4 {
-        grid-template-columns: 50% 20% 30%;
-        grid-template-rows: 200px 400px 400px;
+        grid-template-columns: 40% 10% 20% 5% 25%;
+        grid-template-rows: 200px 80px 360px 360px;
         grid-template-areas: 
-            "na na he" 
-            "s1 s2 s2"
-            "s1 s2 s2"
-        ;
+            "na na na he he" 
+            "d1 d1 d2 d2 d2"
+            "s1 s1 a1 a1 a2"
+            "s1 s1 a3 a3 a4"
+            ;   
+    }
+
+    .headings_tavlingar {
+        font-size: 30px;
+    }
+
+    .lists_tavlingar {
+        font-size: 25px;
+    }
+
+    .list_container {
+        height: 125px;
+    }
+
+    .text_old_results {
+        font-size: 20px;
     }
 }
 
