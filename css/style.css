@@ -8,13 +8,6 @@
 
 /* Styling till sidan "Start" */
 
-.links_to_nav {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 15px;
-    color:black;
-}
-
 #grid-wrapper_1 {
     width: 100vw;
     height: 100vh;
@@ -29,7 +22,6 @@
 
 header {
     grid-area: he;
-    background: yellow;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -53,7 +45,6 @@ header {
 
 .sec1 {
     grid-area: s1;
-    background: purple;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -61,7 +52,6 @@ header {
 
 .sec2 {
     grid-area: s2;
-    background: green;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -76,12 +66,11 @@ header {
 .text_to_images {
     font-size: 13px;
     font-family: 'Times New Roman', Times, serif;
-    color: hotpink;
-
 }
 
 #link_to_principal_contact {
     color: lightblue;
+    text-decoration: none;
 }
 
 .images_main_page {
@@ -105,7 +94,7 @@ nav {
     top: 200px;
     height: 800px;
     left: -20vw;
-    background-color: lightskyblue;
+    background-color: rgb(10, 155, 240);
     align-items: center;
     width: 20vw;
     transition: all 0.5s;
@@ -121,6 +110,10 @@ nav {
 
 .menu a {
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color:black;
 }
 
 .hamburger {
@@ -131,7 +124,7 @@ nav {
 .lines {
     width: 25px;
     height: 3px;
-    background-color: green;
+    background-color: blue;
     margin: 5px;
     border-radius: 10%;
     transition: all 0.5s;
@@ -141,12 +134,21 @@ nav {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.cross .line2{
+.cross .line2 {
     opacity: 0;
 }
 
-.cross .line3{
+.cross .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+.background_image {
+    width: 100vw;
+    height: 1000px;
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 @media screen and (min-width: 900px) {
@@ -188,7 +190,6 @@ header {
 
 .text_to_images {
     font-size: 19px;
-    color: hotpink;
 }
 
 .hamburger {
@@ -211,10 +212,11 @@ header {
     left: 0px;
     width: 70vw;
     height: 200px;
+    background: none
 }
 
-.menu li {
-    font-size: 20px;
+.menu a {
+    font-size: 25px;
 }
 
 }
@@ -226,7 +228,7 @@ header {
     height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 200px 420px 95px 95px 95px 95px;
+    grid-template-rows: 200px 360px 95px 95px 95px 95px;
     grid-template-areas: 
         "na he" 
         "ma ma"
@@ -243,27 +245,22 @@ header {
 
 main {
     grid-area: ma;
-    background: tomato;
 }
 
 #art1 {
     grid-area: a1;
-    background: violet;
 }
 
 #art2 {
     grid-area: a2;
-    background: turquoise;
 }
 
 #art3 {
     grid-area: a3;
-    background: pink;
 }
 
 #art4 {
     grid-area: a4;
-    background: goldenrod;
 }
 
 .trainers {
@@ -273,7 +270,7 @@ main {
 }
 
 .images_trainers {
-    height: 70px;
+    height: 75px;
     width: auto;
     margin-left: 10px;
 }
@@ -281,11 +278,15 @@ main {
 .images_trainers:hover {
     height: 200px;
     width: auto;
-    z-index: 1;
+    z-index: 2;
 }
 
 .list_trainer {
    margin-left: 20px;
+}
+
+#list_trainer_item {
+    list-style-type: none;
 }
 
 #main_om_oss {
@@ -405,23 +406,21 @@ main {
             "a3 a3 a4 a4"
 }
 
-#heading_sec1_tavlingar {
+.heading_div_1 {
     grid-area: d1;
-    background: greenyellow;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#heading_sec2_tavlingar {
+#heading_div_2 {
     grid-area: d2;
-    background: greenyellow;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.headings_tavlingar {
+.headings_inside_div {
     text-decoration: underline;
 }
 
@@ -431,22 +430,18 @@ main {
 
 #art1_in_tidigare_tavlingar {
     grid-area: a1;
-    background: chocolate;
 }
 
 #art2_in_tidigare_tavlingar {
     grid-area: a2;
-    background: blueviolet;
 }
 
 #art3_in_tidigare_tavlingar {
     grid-area: a3;
-    background: grey;
 }
 
 #art4_in_tidigare_tavlingar {
     grid-area: a4;
-    background: red;
 }
 
 .articles_in_tidigare_tavlingar {
@@ -497,7 +492,7 @@ main {
             ;   
     }
 
-    .headings_tavlingar {
+    .headings_inside_div {
         font-size: 30px;
     }
 
@@ -521,25 +516,54 @@ main {
     height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-rows: 200px 700px;
+    grid-template-rows: 200px 50px 450px;
     grid-template-areas: 
-            "na he" 
-            "as s1"    
+            "na he"
+            "d1 d1" 
+            "s1 s1"   
 }
 
-aside {
-    grid-area: as;
-    background: brown;
+
+
+#sec1_kontakt {
+    flex-direction: column;
+}
+
+.lists_kontakt {
+    list-style-type: none;
+}
+
+.heading_under_heading_for_content {
+    margin: 15px;
+    text-decoration: underline;
+}
+
+.e-post_and_telefonnummer {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
 }
 
 @media screen and (min-width: 900px) {
     #grid-wrapper_5 {
         grid-template-columns: 70% 30%;
-        grid-template-rows: 200px 500px 200px;
+        grid-template-rows: 200px 80px 420px;
         grid-template-areas: 
             "na he" 
+            "d1 d1"
             "s1 s1"
-            "as as"
         ;
+    }
+
+    #sec1_kontakt {
+        flex-direction: row;
+    }
+
+    .heading_under_heading_for_content {
+        font-size: 23px;
+    }
+
+    .e-post_and_telefonnummer {
+        font-size: 20px;
     }
 }
